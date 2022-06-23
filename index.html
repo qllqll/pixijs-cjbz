@@ -1,0 +1,146 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PixiJs 原理说明</title>
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+
+    <script src="./js/pixi.min.js"></script>
+    <script src="./js/imagesLoader.min.js"></script>
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script src="./js/TweenMax.min.js"></script>
+
+</head>
+
+<body>
+    <div id="stage"></div>
+
+    <!-- loading BEGIN -->
+    <div class="wrapper loading">
+        <div class="linner">
+            <div class="lbox">
+                <div class="man"></div>
+                <div class="man2"></div>
+                <div class="woman"></div>
+                <div class="line"></div>
+                <div class="loadingNum">0%</div>
+            </div>
+        </div>
+    </div>
+    <!-- loading END -->
+
+    <!-- kv BEGIN -->
+    <div class="wrapper kv">
+        <div class="kvbg">
+            <div class="title"></div>
+            <div class="startBtn"></div>
+        </div>
+    </div>
+    <!-- kv END -->
+
+    <!-- 告白 BEGIN -->
+    <div class="wrapper gb">
+        <div class="gbbg">
+            <div class="txt1"></div>
+            <div class="txt2"></div>
+        </div>
+    </div>
+    <!-- 告白 END -->
+
+    <!-- 布置场景 BEGIN -->
+    <div class="wrapper bzcj">
+        <div class="stage"></div>
+        <div class="saveBtn">
+        </div>
+        <div class="cardContent">
+            <div class="tabs">
+                <div class="tab">
+                    <img src="images/img/nav-place.png" alt="">
+                </div>
+                <div class="tab selected">
+                    <img src="images/img/nav-human.png" alt="">
+                </div>
+                <div class="tab">
+                    <img src="images/img/nav-dec.png" alt="">
+                </div>
+                <div class="tab">
+                    <img src="images/img/nav-pet.png" alt="">
+                </div>
+                <div class="tab xs">
+                    <img src="images/img/nav-arrow.png" alt="">
+                </div>
+            </div>
+            <div class="tabCont">
+                <!-- 风景 -->
+                <div class="tCont">
+                    <img src=" ./images/img/thumb-s1.jpg" alt="">
+                    <img src="./images/img/thumb-s2.jpg" alt="">
+                    <img src="./images/img/thumb-s3.jpg" alt="">
+                    <img src="./images/img/thumb-s4.jpg" alt="">
+                    <img src="./images/img/thumb-s5.jpg" alt="">
+                    <img src="./images/img/thumb-s6.jpg" alt="">
+                    <img src="./images/img/thumb-s7.jpg" alt="">
+                    <img src="./images/img/thumb-s8.jpg" alt="">
+                    <img src="./images/img/thumb-s9.jpg" alt="">
+                </div>
+                <!-- 人物 -->
+                <div class="tCont">
+                    <img src=" ./images/img/thumb-hm1.png" alt="">
+                    <img src="./images/img/thumb-hm4.png" alt="">
+                    <img src="./images/img/thumb-hm3.png" alt="">
+                    <img src="./images/img/thumb-hm2.png" alt="">
+                    <img src="./images/img/thumb-hm5.png" alt="">
+                    <img src="./images/img/thumb-hm6.png" alt="">
+
+                </div>
+                <!-- 修饰 -->
+                <div class="tCont">
+                    <img src=" ./images/img/thumb-d1.png" alt="">
+                    <img src=" ./images/img/thumb-d2.png" alt="">
+                    <img src=" ./images/img/thumb-d3.png" alt="">
+                    <img src=" ./images/img/thumb-d4.png" alt="">
+                    <img src=" ./images/img/thumb-d5.png" alt="">
+                    <img src=" ./images/img/thumb-d6.png" alt="">
+                    <img src=" ./images/img/thumb-d7.png" alt="">
+                    <img src=" ./images/img/thumb-d8.png" alt="">
+                    <img src=" ./images/img/thumb-d9.png" alt="">
+                    <img src=" ./images/img/thumb-d10.png" alt="">
+                    <img src=" ./images/img/thumb-d11.png" alt="">
+                    <img src=" ./images/img/thumb-d12.png" alt="">
+                </div>
+                <!-- 宠物 -->
+                <div class="tCont selected">
+                    <img src=" ./images/img/thumb-p1.png" alt="">
+                    <img src=" ./images/img/thumb-p2.png" alt="">
+                    <img src=" ./images/img/thumb-p3.png" alt="">
+                    <img src=" ./images/img/thumb-p4.png" alt="">
+                    <img src=" ./images/img/thumb-p5.png" alt="">
+                    <img src=" ./images/img/thumb-p6.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- 布置场景 END -->
+
+    <!-- 尾页 BEGIN -->
+    <div class="wrapper wy">
+        <div class="lastpage">
+            <div class="haibao"></div>
+            <div class="xiushi1"></div>
+            <div class="xiushi2"></div>
+            <div class="btns">
+                <div class="btn replayBtn"></div>
+                <div class="btn shareBtn"></div>
+            </div>
+            <div class="xiushi3"></div>
+        </div>
+    </div>
+    <!-- 尾页 END -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
