@@ -1,4 +1,7 @@
 /* 公共样式 */
+body {
+    position: fixed;
+}
 
 .wrapper {
     position: absolute;
@@ -245,6 +248,10 @@ body {
 
 .bzcj {
 
+    canvas {
+        width: 100%;
+    }
+
     .stage {
         position: absolute;
         width: 100vw;
@@ -267,7 +274,7 @@ body {
         .tab {
             width: 20vw;
             display: flex;
-            padding-top: .1563rem;
+            padding: .125rem;
             justify-content: center;
             align-items: center;
 
@@ -286,8 +293,8 @@ body {
     .tabCont {
         height: 11rem;
         width: 98vw;
-        padding-top: .1563rem;
-        background-color: #ffffff;
+        padding-top: .4688rem;
+        background-color: #f6f6f6;
 
         .tCont {
             height: 11rem;
@@ -322,6 +329,26 @@ body {
         background-image: url(../images/img/btn-generate.png);
 
     }
+
+    .subTabContent {
+        position: absolute;
+        right: .4688rem;
+        top: .9375rem;
+
+        .subTab {
+            display: flex;
+            flex-wrap: wrap;
+            width: 20vw;
+            justify-content: space-around;
+            justify-content: start;
+            display: none;
+        }
+
+        img {
+            width: 8vw;
+            margin-bottom: .3125rem;
+        }
+    }
 }
 
 
@@ -335,6 +362,7 @@ body {
         height: 11.875rem;
         right: 0;
         top: 0;
+        z-index: 9;
     }
 
     .xiushi2 {
@@ -343,8 +371,9 @@ body {
         position: absolute;
         width: 5.3438rem;
         height: 6.625rem;
-        left: 20vw;
-        top: 50vh;
+        left: 8vw;
+        top: 45vh;
+        z-index: 9;
     }
 
     .xiushi3 {
@@ -355,6 +384,23 @@ body {
         height: 5.8438rem;
         left: 0;
         bottom: 0;
+
+    }
+
+    .haibao {
+        position: absolute;
+        left: 18vw;
+        top: 7vh;
+        width: 64vw;
+
+        z-index: 1;
+        border: .5938rem #ffffff solid;
+        box-sizing: border-box;
+
+        img {
+            width: 100%;
+            padding: 0;
+        }
     }
 
     .btns {
@@ -363,7 +409,7 @@ body {
         position: absolute;
         left: 50%;
         margin-left: -35vw;
-        top: 70vh;
+        top: 80vh;
         display: flex;
         justify-content: space-between;
 
@@ -383,6 +429,93 @@ body {
     }
 }
 
+.sharelayer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 15;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+
+    .slayer {
+        width: 18.6875rem;
+        height: 13.5625rem;
+        top: 4vw;
+        right: 4vw;
+        background-size: 100% 100%;
+        background-image: url(../images/fn-up-mask.png);
+    }
+}
+
+
+.music {
+    width: 2.5313rem;
+    height: 2.5313rem;
+    position: absolute;
+    top: 4vw;
+    left: 4vw;
+    background-size: 100% 100%;
+}
+
+.musicPlay {
+    background-image: url(../images/play.png);
+}
+
+.musicPause {
+    background-image: url(../images/pause.png);
+}
+
+// 提示竖屏
+.flatTip {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    display: none;
+    color: #ffffff;
+    text-align: center;
+
+    .flagInner {
+        padding: 10%;
+    }
+
+    .icon {
+        width: 4.1875rem;
+        height: 6.8125rem;
+        background-image: url(../images/pixels.png);
+        background-size: 100% 100%;
+        margin: 0 auto .1563rem;
+    }
+}
+
+@media all and (orientation:landscape) {
+
+    // 横屏
+    .allwrapper {
+        display: none;
+    }
+
+    .flatTip {
+        display: block;
+    }
+}
+
+@media all and (orientation:portrait) {
+
+    // 竖屏
+    .allwrapper {
+        display: block;
+    }
+
+    .flatTip {
+        display: none;
+    }
+}
 
 
 /* 尾页 */

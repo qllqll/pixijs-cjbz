@@ -1,4 +1,7 @@
 /* 公共样式 */
+body {
+  position: fixed;
+}
 .wrapper {
   position: absolute;
   width: 100vw;
@@ -190,6 +193,9 @@ body {
   top: 50vh;
 }
 /* 场景布置 */
+.bzcj canvas {
+  width: 100%;
+}
 .bzcj .stage {
   position: absolute;
   width: 100vw;
@@ -210,7 +216,7 @@ body {
 .bzcj .tabs .tab {
   width: 20vw;
   display: flex;
-  padding-top: 0.1563rem;
+  padding: 0.125rem;
   justify-content: center;
   align-items: center;
 }
@@ -223,8 +229,8 @@ body {
 .bzcj .tabCont {
   height: 11rem;
   width: 98vw;
-  padding-top: 0.1563rem;
-  background-color: #ffffff;
+  padding-top: 0.4688rem;
+  background-color: #f6f6f6;
 }
 .bzcj .tabCont .tCont {
   height: 11rem;
@@ -253,6 +259,23 @@ body {
   height: 2.5rem;
   background-image: url(../images/img/btn-generate.png);
 }
+.bzcj .subTabContent {
+  position: absolute;
+  right: 0.4688rem;
+  top: 0.9375rem;
+}
+.bzcj .subTabContent .subTab {
+  display: flex;
+  flex-wrap: wrap;
+  width: 20vw;
+  justify-content: space-around;
+  justify-content: start;
+  display: none;
+}
+.bzcj .subTabContent img {
+  width: 8vw;
+  margin-bottom: 0.3125rem;
+}
 .wy .xiushi1 {
   background-image: url(../images/fn-cloth.png);
   background-size: cover;
@@ -261,6 +284,7 @@ body {
   height: 11.875rem;
   right: 0;
   top: 0;
+  z-index: 9;
 }
 .wy .xiushi2 {
   background-image: url(../images/fn-sepr-flower.png);
@@ -268,8 +292,9 @@ body {
   position: absolute;
   width: 5.3438rem;
   height: 6.625rem;
-  left: 20vw;
-  top: 50vh;
+  left: 8vw;
+  top: 45vh;
+  z-index: 9;
 }
 .wy .xiushi3 {
   background-image: url(../images/fn-b-flower.png);
@@ -280,12 +305,25 @@ body {
   left: 0;
   bottom: 0;
 }
+.wy .haibao {
+  position: absolute;
+  left: 18vw;
+  top: 7vh;
+  width: 64vw;
+  z-index: 1;
+  border: 0.5938rem #ffffff solid;
+  box-sizing: border-box;
+}
+.wy .haibao img {
+  width: 100%;
+  padding: 0;
+}
 .wy .btns {
   width: 70vw;
   position: absolute;
   left: 50%;
   margin-left: -35vw;
-  top: 70vh;
+  top: 80vh;
   display: flex;
   justify-content: space-between;
 }
@@ -299,5 +337,75 @@ body {
 }
 .wy .btns .shareBtn {
   background-image: url(../images/btn-r.png);
+}
+.sharelayer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 15;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+.sharelayer .slayer {
+  width: 18.6875rem;
+  height: 13.5625rem;
+  top: 4vw;
+  right: 4vw;
+  background-size: 100% 100%;
+  background-image: url(../images/fn-up-mask.png);
+}
+.music {
+  width: 2.5313rem;
+  height: 2.5313rem;
+  position: absolute;
+  top: 4vw;
+  left: 4vw;
+  background-size: 100% 100%;
+}
+.musicPlay {
+  background-image: url(../images/play.png);
+}
+.musicPause {
+  background-image: url(../images/pause.png);
+}
+.flatTip {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  display: none;
+  color: #ffffff;
+  text-align: center;
+}
+.flatTip .flagInner {
+  padding: 10%;
+}
+.flatTip .icon {
+  width: 4.1875rem;
+  height: 6.8125rem;
+  background-image: url(../images/pixels.png);
+  background-size: 100% 100%;
+  margin: 0 auto 0.1563rem;
+}
+@media all and (orientation: landscape) {
+  .allwrapper {
+    display: none;
+  }
+  .flatTip {
+    display: block;
+  }
+}
+@media all and (orientation: portrait) {
+  .allwrapper {
+    display: block;
+  }
+  .flatTip {
+    display: none;
+  }
 }
 /* 尾页 */
